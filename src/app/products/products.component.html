@@ -1,0 +1,16 @@
+<div class="container mt-6">
+  <div class="center">
+    <h1 class="display-4">Produits disponibles</h1>
+  </div>
+  <app-products-filter (productsFilterPriceSup)="receivePriceFilterSup($event)" (productsFilterPriceInf)="receivePriceFilterInf($event)" (productsFilterName)="receiveNameFilter($event)"></app-products-filter>
+  <table>
+    <tr>
+      <th>Nom du produit</th>
+      <th>Prix</th>
+    </tr>
+    <tr *ngFor="let item of produits | async">
+      <td>{{ item.nom }}</td>
+      <td>{{ item.prix }}€</td>
+    </tr>
+  </table>
+</div>
