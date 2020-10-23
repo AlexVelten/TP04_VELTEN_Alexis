@@ -6,6 +6,7 @@
     <img src="{{ (product$ | async)?.url }}"><br>
   </div>
   <div class="product-price">
-    <span>Prix du produit : {{ (product$ | async)?.prix }}€</span>
+    <span>Prix du produit : {{ (product$ | async)?.prix }}€</span><br>
+    <button type="button" (click)="addProduct()" class="btn btn-info">Ajouter au panier</button>
   </div>
 </div>
