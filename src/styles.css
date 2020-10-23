@@ -85,3 +85,52 @@ th
 .product-filter {
   margin-top: 10px;
 }
+
+
+.notification {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+a:hover {
+  color: green !important;
+}
+
+thead {
+  text-align: center;
+}
+
+.button-product {
+  text-align: center;
+}
+
+.product-img {
+  text-align: center;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+  color: green;
+}
+
+img {
+  width: 60%;
+}
+
+.product-payment {
+  text-align: center;
+}

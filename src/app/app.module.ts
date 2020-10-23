@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 import { HttpClientModule } from '@angular/common/http';
+import { NgxsModule } from '@ngxs/store';
 
 import { Client } from './models/client';
 import { Pipe } from "@angular/core";
@@ -17,6 +18,9 @@ import { PhonePipe } from './phone.pipe';
 import { ProductsComponent } from './products/products.component';
 import { ProductsFilterComponent } from './products-filter/products-filter.component';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductState } from "../shared/states/product-state";
+import { ProductsDetailComponent } from './products-detail/products-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,16 @@ import { HomeComponent } from './home/home.component';
     PhonePipe,
     ProductsComponent,
     ProductsFilterComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent,
+    ProductsDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxsModule.forRoot([ProductState])
   ],
   providers: [],
   bootstrap: [AppComponent]

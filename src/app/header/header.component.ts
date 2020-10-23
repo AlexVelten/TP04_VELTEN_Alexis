@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from "@ngxs/store";
+import { Observable } from "rxjs";
+import { Produit } from "../models/produit";
+import { ProductState } from "../../shared/states/product-state";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  nbProducts$: Observable<number>;
+
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.nbProducts$ = this.store.select(ProductState.getNbProducts);
   }
 
 }
