@@ -15,8 +15,6 @@ import { FooterComponent } from './footer/footer.component';
 import { FormValidationsComponent } from './form-validations/form-validations.component';
 import { FormCustomerComponent } from './form-customer/form-customer.component';
 import { PhonePipe } from './phone.pipe';
-import { ProductsComponent } from './products/products.component';
-import { ProductsFilterComponent } from './products-filter/products-filter.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductState } from "../shared/states/product-state";
@@ -27,19 +25,11 @@ import { ProductsDetailComponent } from './products-detail/products-detail.compo
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    FormValidationsComponent,
-    FormCustomerComponent,
-    PhonePipe,
-    ProductsComponent,
-    ProductsFilterComponent,
-    HomeComponent,
-    CartComponent,
-    ProductsDetailComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     NgxsModule.forRoot([ProductState])
   ],
